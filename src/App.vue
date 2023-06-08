@@ -32,7 +32,7 @@ function isAdult(user: UserModel) {
 
 <template>
   <div>
-    <h2>don't work with kebab case props and inline function props</h2>
+    <h2>don't work </h2>
     <CompKebabCase1
       v-slot="{ list }"
       :data-fetch="getUserList"
@@ -43,11 +43,11 @@ function isAdult(user: UserModel) {
     >
       <li v-for="(user, index) in list" :key="index">
         <!-- Property 'isAdult' does not exist on type 'UserModel'.ts(2339) -->
-        name: {{ user.name }} == age: {{ user.age }} == isAdult:{{ user.isAdult }}
+        name: {{ user.name }} == age: {{ user.age }} == isAdult: {{ user.isAdult }}
       </li>
     </CompKebabCase1>
-    
-     <h2>don't work with kebab case props and inline function props</h2>
+
+    <h2>don't work </h2>
     <CompKebabCase2
       v-slot="{ list }"
       :fetch="getUserList"
@@ -58,7 +58,7 @@ function isAdult(user: UserModel) {
     >
       <li v-for="(user, index) in list" :key="index">
         <!-- Property 'isAdult' does not exist on type 'UserModel'.ts(2339) -->
-        name: {{ user.name }} == age: {{ user.age }} == isAdult:{{ user.isAdult }}
+        name: {{ user.name }} == age: {{ user.age }} == isAdult: {{ user.isAdult }}
       </li>
     </CompKebabCase2>
 
@@ -72,7 +72,7 @@ function isAdult(user: UserModel) {
       })"
     >
       <li v-for="(user, index) in list" :key="index">
-        name: {{ user.name }} == age: {{ user.age }} == isAdult:{{ user.isAdult }}
+        name: {{ user.name }} == age: {{ user.age }} == isAdult: {{ user.isAdult }}
       </li>
     </Comp>
 
@@ -85,7 +85,7 @@ function isAdult(user: UserModel) {
       :formater="isAdult"
     >
       <li v-for="(user, index) in list" :key="index">
-        name: {{ user.name }} == age: {{ user.age }} == isAdult:{{ user.isAdult }}
+        name: {{ user.name }} == age: {{ user.age }} == isAdult: {{ user.isAdult }}
       </li>
     </CompKebabCase1>
 
@@ -98,7 +98,7 @@ function isAdult(user: UserModel) {
     >
       <li v-for="(user, index) in list" :key="index">
         <!-- Property 'isAdult' does not exist on type 'UserModel'.ts(2339) -->
-        name: {{ user.name }} == age: {{ user.age }} == isAdult:{{ user.isAdult }}
+        name: {{ user.name }} == age: {{ user.age }} == isAdult: {{ user.isAdult }}
       </li>
     </CompKebabCase2>
 
@@ -109,7 +109,7 @@ function isAdult(user: UserModel) {
       :formater="isAdult"
     >
       <li v-for="(user, index) in list" :key="index">
-        name: {{ user.name }} == age: {{ user.age }} == isAdult:{{ user.isAdult }}
+        name: {{ user.name }} == age: {{ user.age }} == isAdult: {{ user.isAdult }}
       </li>
     </Comp>
   </div>
