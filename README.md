@@ -1,50 +1,18 @@
-# vue
+# Vue 3 + TypeScript + Vite
 
-It's not working when i use kebab case props and function props in generic components
+This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-``` html
-   <h2>It's not working </h2>
-    <CompKebabCase1
-      v-slot="{ list }"
-      :data-fetch="getUserList"
-      :formater="user => ({
-        ...user,
-        isAdult: user.age >= 18,
-      })"
-    >
-      <li v-for="(user, index) in list" :key="index">
-        <!-- Property 'isAdult' does not exist on type 'UserModel'.ts(2339) -->
-        name: {{ user.name }} == age: {{ user.age }} == isAdult: {{ user.isAdult }}
-      </li>
-    </CompKebabCase1>
+## Recommended IDE Setup
 
-    <h2>It's not working </h2>
-    <CompKebabCase2
-      v-slot="{ list }"
-      :fetch="getUserList"
-      :data-formater="user => ({
-        ...user,
-        isAdult: user.age >= 18,
-      })"
-    >
-      <li v-for="(user, index) in list" :key="index">
-        <!-- Property 'isAdult' does not exist on type 'UserModel'.ts(2339) -->
-        name: {{ user.name }} == age: {{ user.age }} == isAdult: {{ user.isAdult }}
-      </li>
-    </CompKebabCase2>
+- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-    <h2>work ！</h2>
-    <Comp
-      v-slot="{ list }"
-      :fetch="getUserList"
-      :formater="user => ({
-        ...user,
-        isAdult: user.age >= 18,
-      })"
-    >
-      <li v-for="(user, index) in list" :key="index">
-        name: {{ user.name }} == age: {{ user.age }} == isAdult: {{ user.isAdult }}
-      </li>
-    </Comp>
+## Type Support For `.vue` Imports in TS
 
-```
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+
+If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+
+1. Disable the built-in TypeScript Extension
+   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
+   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
+2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
