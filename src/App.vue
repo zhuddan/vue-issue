@@ -32,7 +32,7 @@ function isAdult(user: UserModel) {
 
 <template>
   <div>
-    <h2>don't work </h2>
+    <h2>It's not working </h2>
     <CompKebabCase1
       v-slot="{ list }"
       :data-fetch="getUserList"
@@ -47,7 +47,7 @@ function isAdult(user: UserModel) {
       </li>
     </CompKebabCase1>
 
-    <h2>don't work </h2>
+    <h2>It's not working </h2>
     <CompKebabCase2
       v-slot="{ list }"
       :fetch="getUserList"
